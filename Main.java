@@ -4,25 +4,25 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Membuat objek MemberManager
-        Member memberManager = new Member(null, null, 0);
-
+        // Membuat objek memberRepo
+        Member memberRepo = new Member(null, null, 0);
+        
         // Menampilkan semua member yang terdaftar
-        memberManager.displayMembers();
+        memberRepo.displayMembers();
 
         // Meminta pengguna memasukkan nama member
         System.out.print("Masukkan Nama Member: ");
         String memberName = scanner.nextLine();
 
         // Menambahkan member baru
-        memberManager.addMember(memberName);
+        memberRepo.addMember(memberName);
 
         // Menambah point berdasarkan transaksi
         System.out.print("Masukkan jumlah transaksi: ");
         int transaksi = scanner.nextInt();
         
         // Menambahkan point pada member terakhir yang didaftarkan
-        memberManager.tambahPoint(transaksi);
+        memberRepo.tambahPoint(transaksi);
 
         // Menampilkan daftar hadiah yang bisa ditukar
         System.out.println("Daftar Hadiah:");
@@ -36,7 +36,7 @@ public class Main {
         int pilihanHadiah = scanner.nextInt();
         
         // Menukarkan point pada member terakhir yang didaftarkan
-        memberManager.tukarPoint(pilihanHadiah);
+        memberRepo.tukarPoint(pilihanHadiah);
 
         scanner.close();
     }

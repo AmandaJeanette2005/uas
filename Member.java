@@ -33,16 +33,6 @@ public class Member {
         return point;
     }
 
-    // Metode setter untuk mengubah nama pelanggan
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    // Metode setter untuk mengubah point pelanggan
-    public void setPoint(int point) {
-        this.point = point;
-    }
-
     // Metode toString untuk mengembalikan representasi string dari objek Member
     @Override
     public String toString() {
@@ -116,4 +106,5 @@ public class Member {
             System.out.println("Point Anda tidak mencukupi untuk menukarkan hadiah ini.");
         }
     }
+
 }
